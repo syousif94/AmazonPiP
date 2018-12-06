@@ -14,6 +14,8 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         // This method will be called when a content script provided by your extension calls safari.extension.dispatchMessage("message").
         page.getPropertiesWithCompletionHandler { properties in
             NSLog("The extension received a message (\(messageName)) from a script injected into (\(String(describing: properties?.url))) with userInfo (\(userInfo ?? [:]))")
+            
+            print(messageName)
         }
     }
     
